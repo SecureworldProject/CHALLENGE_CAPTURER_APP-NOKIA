@@ -3,7 +3,6 @@
 Aplicación Android para capturar imágenes, vídeos, sonidos, u otros datos que aprovechan los sensores del dispositivo móvil, y subirlos a una carpeta de google drive (u otro repositorio similar) para que sean procesados por challenges desde el programa securemirror.exe.
 
 
-
 ### Para desarrollar y escribir código es necesario instalar:
  - Android Studio
 
@@ -16,7 +15,16 @@ Para hacer pruebas es necesario habilitar:
 
 
 ### Archivos importantes dentro de un proyecto de Android Studio
- - **App > manifest > AndroidManifest.xml**: en él se describe la aplicación. Piden los permisos
+ - **App > manifest > AndroidManifest.xml**: en él se describe la aplicación: se piden los permisos y se detallan las formas de llamar a la aplicación desde otras (intent-filters).
  - **App > java > MainActivity.kt**: (u otro **xxx.kt**) es el código (Kotlin) que se ejecuta en una actividad (una pantalla de la aplicación).
  - **App > res > layout > activity_main.xml**: es un código XML de descripción visual de una actividad (una pantalla de la aplicación). Se puede editar como texto manipulando el XML directamente, o gráficamente arrastrando elementos gráficos como cajas de texto o botones.
  - **Gradle Scripts > build.gradle (Module:\<APP_NAME\>.app)**: contiene los plugins de la aplicación e "imports" externos necesarios.
+
+
+##### NOTE: naming convention in Kotlin
+ - **Packages**: use full lowercase. Example: *com.nokia.secureworldapp*
+ - **Types**: use PascalCase. Example: *RemoteHostController*
+ - **Functions**: use camelCase. Example: *connectToServer()*
+ - **Constants**: use UPPER_SNAKE_CASE. Example: *LOCALHOST_IP*
+ - **Variables**: use camelCase. Example: *numberOfClientsOnline*
+

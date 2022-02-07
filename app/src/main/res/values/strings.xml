@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">ChallengeCapturerApp</string>
+    <string name="app_name_spaced">Challenge Capturer App</string>
+    <string name="device_linked_info_true">This device is linked with secureworld. You can use the application correctly or relink it with a new QR code.</string>
+    <string name="device_linked_info_false">This device is not linked with secureworld. You will not be able to use the application until you link it with a QR code.</string>
+    <string name="device_linked_url">URL:</string>
+    <string name="device_linked_url_data">No URL active.</string>
+    <string name="open_qr_scanner">Open QR Scanner to link device</string>
+    <string name="capture_select">Select the capture method required:</string>
+    <string name="capture_image">Capture Image</string>
+    <string name="capture_audio">Capture Audio</string>
+    <string name="capture_video">Capture Video</string>
 </resources>
