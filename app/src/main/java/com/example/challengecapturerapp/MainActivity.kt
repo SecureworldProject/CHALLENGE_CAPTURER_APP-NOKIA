@@ -149,6 +149,11 @@ class MainActivity : AppCompatActivity() {
             } catch (e: Exception) {
                 // TODO launch an app or app selector of apps that can read QR codes
                 Toast.makeText(this, "On development...", Toast.LENGTH_SHORT).show()
+                // Fake the drivelink for testing
+                println("Change drivelink for testing purposes... xxx")
+                setDriveLink("xxx")
+                updateDriveLinkView()
+
 
                 //Toast.makeText(this, "No QR Code Scanner is installed", Toast.LENGTH_SHORT).show()
 
@@ -179,9 +184,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnCaptureImage.setOnClickListener() {
-            // TODO
             if (getDriveLink().isNotEmpty()){
                 Toast.makeText(this, "Pressed capture image.", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, CapturePhotoActivity::class.java)
+                startActivity(intent)
+                Toast.makeText(this, "Ended capture image.", Toast.LENGTH_SHORT).show()
             } else {
                 // This should never happen (the button is hidden)
                 Toast.makeText(this, "Device is not linked yet.", Toast.LENGTH_SHORT).show()
